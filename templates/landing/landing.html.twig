@@ -3,61 +3,14 @@
 {% block stylesheets %}
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="lib/slick/slick.css" />
-    <link rel="stylesheet" type="text/css" href="lib/slick/slick-theme.css" />
+    <link rel="stylesheet" type="text/css" href="lib/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="lib/slick/slick-theme.css"/>
     <link rel="stylesheet" href="css/landing.css">
 {% endblock %}
 
 {% block javascripts %}
     <script src="landing.js"></script>
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script type="text/javascript" src="lib/slick/slick.min.js"></script>
 
-    <script type="text/javascript">
-    $(document).ready(function () {
-      $('.car-list').slick({
-        dots: true,
-        infinite: true,
-        slidesToShow: 4,
-        slidesToScroll: 4,
-        responsive: [
-          {
-            breakpoint: 1200,
-            settings: {
-              slidesToShow: 2,
-              slidesToScroll: 2,
-              infinite:true
-            }
-          },
-          {
-            breakpoint: 991,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1,
-              infinite:true
-            }
-          }
-          // You can unslick at a given breakpoint now by adding:
-          // settings: "unslick"
-          // instead of a settings object
-        ]
-      });
-    })
-    var filtered = false;
-
-    $('.js-filter').on('click', function () {
-      if (filtered === false) {
-        $('.car-list').slick('slickFilter', ':even');
-        $(this).text('Unfilter Slides');
-        filtered = true;
-      } else {
-        $('.car-list').slick('slickUnfilter');
-        $(this).text('Filter Slides');
-        filtered = false;
-      }
-    });
-  </script>
 {% endblock %}
 
 {% block title %}AromaLavid{% endblock %}
@@ -68,9 +21,10 @@
         <div class="container-fluid">
             <nav class="navbar navbar-expand-lg bg-navi fixed-top">
                 <div class="container jcon">
-                    <a href="#" class="navbar-brand mb-0 h1" href="#"><img src="img/logo.png" id="logo" alt="..">AromaLavid</a>
+                    <a href="#" class="navbar-brand mb-0 h1" ><img src="img/logo.png" id="logo" alt="..">AromaLavid</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false"
                             aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -85,23 +39,6 @@
                             <li class="nav-item">
                                 <a href="#catalog" class="nav-link active">товар</a>
                             </li>
-                            <!-- <li class="nav-item">
-                              <a href="#backdrop" class="nav-link active">Обратная связь</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                              <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">Список</a>
-                              <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li>
-                                  <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                              </ul>
-                            </li>
-                            <li class="nav-item">
-                              <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Войти</button>
-                            </li> -->
                         </ul>
                     </div>
                 </div>
@@ -121,13 +58,16 @@
                     <form>
                         <div class="form-group">
                             <label for="exampleInputEmail1">Email address</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                   aria-describedby="emailHelp"
                                    placeholder="Enter email">
-                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                                else.</small>
                         </div>
                         <div class="form-group">
                             <label for="exampleInputPassword1">Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                            <input type="password" class="form-control" id="exampleInputPassword1"
+                                   placeholder="Password">
                         </div>
                     </form>
                 </div>
@@ -141,7 +81,8 @@
     <!-- модальное окно конец -->
 
     <!-- модальное окно инфа о товаре -->
-    <div class="modal fade" id="itemsModal" data-bs-backdrop="static" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="itemsModal" data-bs-backdrop="static" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
@@ -150,12 +91,14 @@
                 </div>
                 <div class="modal-body">
                     <div class="card text-center card-insp">
-                        <div class="img-wrapper"><img src="/img/perf1.png" alt=".." />
+                        <div class="img-wrapper"><img src="/img/perf1.png" alt=".."/>
                             <div class="card-body">
                                 <h4 class="card-title">Card title</h4>
                                 <p class="card-text">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, quidem, laboriosam praesentium
-                                    voluptates illo vitae, repudiandae provident soluta dolores sint beatae magni deleniti inventore quas
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, quidem, laboriosam
+                                    praesentium
+                                    voluptates illo vitae, repudiandae provident soluta dolores sint beatae magni
+                                    deleniti inventore quas
                                     iure voluptatem. Reiciendis, eius repellendus!
                                 </p>
                             </div>
@@ -185,10 +128,10 @@
     </section>
     <!-- о нас  -->
     <section class="info d-flex align-items-center" id="info">
-        <div class="container px-0">
-            <div class="row ">
+        <div class="container">
+            <div class="row">
                 <div class="col-lg-6 order-lg-2">
-                    <div class="p-5"><img class="img-fluid aboutUs" src="img/perf1.png" alt="..." /></div>
+                    <div class="p-5"><img class="img-fluid aboutUs" src="img/perf1.png" alt="..."/></div>
                 </div>
                 <div class="col-lg-6 order-lg-1">
                     <div class="p-5">
@@ -203,14 +146,15 @@
     </section>
     <!-- каталог карусель  -->
     <section class="carousel" id="catalog">
-        <div class="container pt-5">
-            <div class="content">
-                <!-- кнопка фильтра -->
-                <div class="filter-button text-center pb-2 flex-row"><button class="btn js-filter btn-light">Filter Slides</button></div>
-                <!-- объекты карусели -->
-                <div class="car-list ">
-                    <div class="card col-md-12 col-lg-3 " style="width: 18rem;">
-                        <div class="img-wrapper"><img src="/img/perf1.png" class="card-img-top" alt="..."></div>
+        <!-- кнопка фильтра -->
+        <div class="filter-button text-center mb-2 flex-row"><button class="btn js-filter btn-light">Filter Slides</button>
+        </div>
+        <!-- объекты карусели -->
+        <div class="container pt-3">
+            <div class="row car-list">
+                <div class="col-4 px-2">
+                    <div class="card">
+                        <img src="/img/perf3.png" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
@@ -218,8 +162,10 @@
                             <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#itemsModal">Детали</a>
                         </div>
                     </div>
-                    <div class="card col-md-12 col-lg-3" style="width: 18rem;">
-                        <div class="img-wrapper"><img src="/img/perf2.png" class="card-img-top" alt="..."></div>
+                </div>
+                <div class="col-4 px-2">
+                    <div class="card">
+                        <img src="/img/perf4.png" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
@@ -227,8 +173,10 @@
                             <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#itemsModal">Детали</a>
                         </div>
                     </div>
-                    <div class="card col-md-12 col-lg-3 " style="width: 18rem;">
-                        <div class="img-wrapper"><img src="/img/perf1.png" class="card-img-top" alt="..."></div>
+                </div>
+                <div class="col-4 px-2">
+                    <div class="card">
+                        <img src="/img/perf4.png" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
@@ -236,8 +184,10 @@
                             <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#itemsModal">Детали</a>
                         </div>
                     </div>
-                    <div class="card col-md-12 col-lg-3" style="width: 18rem;">
-                        <div class="img-wrapper"><img src="/img/perf2.png" class="card-img-top" alt="..."></div>
+                </div>
+                <div class="col-4 px-2">
+                    <div class="card">
+                        <img src="/img/perf3.png" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
@@ -245,8 +195,10 @@
                             <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#itemsModal">Детали</a>
                         </div>
                     </div>
-                    <div class="card col-md-12 col-lg-3 " style="width: 18rem;">
-                        <div class="img-wrapper"><img src="/img/perf1.png" class="card-img-top" alt="..."></div>
+                </div>
+                <div class="col-4 px-2">
+                    <div class="card">
+                        <img src="/img/perf4.png" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
@@ -254,26 +206,10 @@
                             <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#itemsModal">Детали</a>
                         </div>
                     </div>
-                    <div class="card col-md-12 col-lg-3" style="width: 18rem;">
-                        <div class="img-wrapper"><img src="/img/perf2.png" class="card-img-top" alt="..."></div>
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                                content.</p>
-                            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#itemsModal">Детали</a>
-                        </div>
-                    </div>
-                    <div class="card col-md-12 col-lg-3 " style="width: 18rem;">
-                        <div class="img-wrapper"><img src="/img/perf1.png" class="card-img-top" alt="..."></div>
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                                content.</p>
-                            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#itemsModal">Детали</a>
-                        </div>
-                    </div>
-                    <div class="card col-md-12 col-lg-3" style="width: 18rem;">
-                        <div class="img-wrapper"><img src="/img/perf2.png" class="card-img-top" alt="..."></div>
+                </div>
+                <div class="col-4 px-2">
+                    <div class="card">
+                        <img src="/img/perf4.png" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
@@ -292,12 +228,14 @@
             <div class="row justify-content-center">
                 <div class="col-sm-12 col-md-4 px-4">
                     <div class="card text-center card-insp">
-                        <div class="img-wrapper-insp"><img src="/img/pic1.png" alt=".." />
+                        <div class="img-wrapper-insp"><img src="/img/pic1.png" alt=".."/>
                             <div class="card-body">
                                 <h4 class="card-title">Card title</h4>
                                 <p class="card-text">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, quidem, laboriosam praesentium
-                                    voluptates illo vitae, repudiandae provident soluta dolores sint beatae magni deleniti inventore quas
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, quidem, laboriosam
+                                    praesentium
+                                    voluptates illo vitae, repudiandae provident soluta dolores sint beatae magni
+                                    deleniti inventore quas
                                     iure voluptatem. Reiciendis, eius repellendus!
                                 </p>
                             </div>
@@ -306,12 +244,14 @@
                 </div>
                 <div class="col-sm-12 col-md-4 px-4">
                     <div class="card text-center card-insp">
-                        <div class="img-wrapper-insp"><img src="/img/pic2.png" alt=".." />
+                        <div class="img-wrapper-insp"><img src="/img/pic2.png" alt=".."/>
                             <div class="card-body">
                                 <h4 class="card-title">Card title</h4>
                                 <p class="card-text">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, quidem, laboriosam praesentium
-                                    voluptates illo vitae, repudiandae provident soluta dolores sint beatae magni deleniti inventore quas
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, quidem, laboriosam
+                                    praesentium
+                                    voluptates illo vitae, repudiandae provident soluta dolores sint beatae magni
+                                    deleniti inventore quas
                                     iure voluptatem. Reiciendis, eius repellendus!
                                 </p>
                             </div>
@@ -320,12 +260,14 @@
                 </div>
                 <div class="col-sm-12 col-md-4 px-4">
                     <div class="card text-center card-insp">
-                        <div class="img-wrapper-insp"><img src="/img/pic3.png" alt=".." />
+                        <div class="img-wrapper-insp"><img src="/img/pic3.png" alt=".."/>
                             <div class="card-body">
                                 <h4 class="card-title">Card title</h4>
                                 <p class="card-text">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, quidem, laboriosam praesentium
-                                    voluptates illo vitae, repudiandae provident soluta dolores sint beatae magni deleniti inventore quas
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, quidem, laboriosam
+                                    praesentium
+                                    voluptates illo vitae, repudiandae provident soluta dolores sint beatae magni
+                                    deleniti inventore quas
                                     iure voluptatem. Reiciendis, eius repellendus!
                                 </p>
                             </div>
@@ -357,4 +299,57 @@
         </div>
         <!-- Copyright -->
     </footer>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="lib/slick/slick.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.car-list').slick({
+                dots: true,
+                infinite: false,
+                slidesToShow: 4,
+                slidesToScroll: 4,
+                responsive: [
+                    {
+                        breakpoint: 1200,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 1,
+                            infinite: true
+                        }
+                    },
+                    {
+                        breakpoint: 996,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 1,
+                            infinite: true
+                        }
+                    },
+                    {
+                        breakpoint: 700,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                            infinite: true
+                        }
+                    }
+                ]
+            });
+        })
+        var filtered = false;
+
+        $('.js-filter').on('click', function () {
+            if (filtered === false) {
+                $('.car-list').slick('slickFilter', ':even');
+                $(this).text('Unfilter Slides');
+                filtered = true;
+            } else {
+                $('.car-list').slick('slickUnfilter');
+                $(this).text('Filter Slides');
+                filtered = false;
+            }
+        });
+    </script>
 {% endblock %}

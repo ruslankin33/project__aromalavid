@@ -1,16 +1,16 @@
 body{
   background: pink;
   background-image: linear-gradient(180deg, rgba(255,206,250,1) 0%, rgba(255,236,134,1) 100%);
-  padding: 0px;
-  }
-  .hide{
-    display: none;
-  }
-  .project{
-    border: 1px solid #eaeaea;
-    margin: 20px;
-    padding: 20px;
-  }
+  padding: 0;
+}
+.hide{
+  display: none;
+}
+.project{
+  border: 1px solid #eaeaea;
+  margin: 20px;
+  padding: 20px;
+}
 #logo {
   width: 35px;
   height: 35px;
@@ -30,17 +30,12 @@ body{
   width: 75vw;
 }
 @media screen and (max-width:991px) {
-      .jcon {
-      width: 90vw;
-    }
+  .jcon {
+    width: 90vw;
+  }
 }
 
-.bgImg {
-  background-image: url(/img/rec4.png);
-  background-repeat: repeat-x;
-  background-size: cover;
-  justify-content: end;
-}
+
 .container-header {
   height: 100vh;
 }
@@ -60,11 +55,11 @@ body{
 }
 @media screen and (max-width:991px) {
   .ps-6 {
-    padding: 0px;
+    padding: 0;
   }
   .content-header {
     justify-content: center;
-  }  
+  }
   .col.h1 {
     font-size: 45px;
   }
@@ -72,9 +67,9 @@ body{
     font-size: 30px;
   }
   .ps-6 {
-    padding: auto;
+    padding: 0;
   }
-  
+
 }
 .btn-sm {
   width: 100px;
@@ -122,10 +117,7 @@ body{
 .form-control {
   resize: none;
 }
-.card {
-  margin: 0.5em;
-  height: 50vh;
-}
+
 
 img {
   max-width: 100%;
@@ -144,8 +136,8 @@ img {
   /* background: linear-gradient(0deg, rgba(255,236,134,1) 0%, rgba(255,206,250,1) 100%); */
   padding-top: 130px;
 }
-.card-insp { 
-  height: 40vh; 
+.card-insp {
+  height: 40vh;
   border:0;
   background:none;
 }
