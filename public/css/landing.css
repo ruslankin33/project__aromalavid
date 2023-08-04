@@ -38,7 +38,7 @@ body {
 }
 
 .bgImg {
-  background-image: url(img/beach3.png);
+  background-image: url(/img/beach3.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -278,17 +278,17 @@ img {
 #liner {
 }
 #tg {
-  background-image:url(img/tg.png);
+  background-image:url(/img/tg.png);
   background-size:contain;
   background-repeat:no-repeat;
 }
 #vk {
-  background-image:url(img/vk.png);
+  background-image:url(/img/vk.png);
   background-size:contain;
   background-repeat:no-repeat;
 }
 #inst {
-  background-image:url(img/inst.png);
+  background-image:url(/img/inst.png);
   background-size:contain;
   background-repeat:no-repeat;
 }
