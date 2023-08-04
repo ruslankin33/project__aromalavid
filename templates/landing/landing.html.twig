@@ -18,13 +18,12 @@
 {% block body %}
     <!-- навигационное меню -->
     <section class="navibar">
-        <div class="container-fluid">
-            <nav class="navbar navbar-expand-lg bg-navi fixed-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg bg-info fixed-top">
                 <div class="container jcon">
-                    <a href="#" class="navbar-brand mb-0 h1" ><img src="img/logo.png" id="logo" alt="..">AromaLavid</a>
+                    <a href="#" class="navbar-brand mb-0 h1" href="#"><img src="img/logog.svg" id="logo" alt="..">Aromalavid</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                            aria-expanded="false"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                             aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -46,39 +45,6 @@
         </div>
     </section>
     <!-- навигационное меню конец -->
-    <!-- модальное окно -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">Email address</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1"
-                                   aria-describedby="emailHelp"
-                                   placeholder="Enter email">
-                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
-                                else.</small>
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputPassword1">Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1"
-                                   placeholder="Password">
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- модальное окно конец -->
 
     <!-- модальное окно инфа о товаре -->
     <div class="modal fade" id="itemsModal" data-bs-backdrop="static" aria-labelledby="exampleModalLabel"
@@ -91,14 +57,12 @@
                 </div>
                 <div class="modal-body">
                     <div class="card text-center card-insp">
-                        <div class="img-wrapper"><img src="/img/perf1.png" alt=".."/>
+                        <div class="img-wrapper"><img src="/img/shaq.gif" alt=".." />
                             <div class="card-body">
                                 <h4 class="card-title">Card title</h4>
                                 <p class="card-text">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, quidem, laboriosam
-                                    praesentium
-                                    voluptates illo vitae, repudiandae provident soluta dolores sint beatae magni
-                                    deleniti inventore quas
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, quidem, laboriosam praesentium
+                                    voluptates illo vitae, repudiandae provident soluta dolores sint beatae magni deleniti inventore quas
                                     iure voluptatem. Reiciendis, eius repellendus!
                                 </p>
                             </div>
@@ -111,111 +75,143 @@
             </div>
         </div>
     </div>
+
     <!-- головное -->
     <section class="header">
         <div class="bgImg">
-            <div class="container-fluid container-header">
-                <div class="content-header d-flex align-items-center">
-                    <div class="row  flex-column  mb3 ps-6">
-                        <div class="col h1">AromaLavid</div>
-                        <div class="col h2">текст пример</div>
-                        <div class="col d-flex "><a class="btn btn-light" role="button" id="toCat" href="#catalog">Каталог</a>
+            <div class="container container-header align-items-center">
+                <div class="row">
+                    <div class="col-10 col-md-4 offset-md-3 shit">
+                        <h1>Большая коллекция</h1>
+                        <p class="h2">парфюмерии</p>
+                        <a class="btn btn-light" role="button" id="toCat" href="#catalog">Каталог</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#F6BC8C" fill-opacity="1"
+                  d="M 0 158 L 39 190 C 84 217 192 203 288 240 C 384 277 480 267 576 240 C 672 213 768 171 865 160 C 960 160 1056 192 1152 186.7 C 1248 181 1344 139 1392 117.3 L 1440 96 L 1440 320 L 1392 320 C 1344 320 1248 320 1152 320 C 1056 320 960 320 864 320 C 768 320 672 320 576 320 C 480 320 384 320 288 320 C 192 320 96 320 48 320 L 0 320 Z">
+            </path>
+        </svg>
+    </section>
+    <!-- каталог карусель  -->
+    <section class="carousel" id="catalog">
+        <div class="container carusel">
+            <div class="row justify-content-center">
+                <div class="col-10 col-md-8 py-4"><img src="/img/line_bt.webp" alt="" id="liner"></div>
+            </div>
+            <h1 id="new_test">Новинки</h1>
+            <!-- кнопка фильтра -->
+            <div class="d-flex justify-content-center py-4">
+                <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                    <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+                    <label class="btn btn-light" for="btnradio1">женски</label>
+
+                    <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                    <label class="btn btn-light" for="btnradio2">жоски</label>
+
+                    <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+                    <label class="btn btn-light" for="btnradio3">свежи</label>
+                </div>
+            </div>
+            <!-- объекты карусели -->
+            <div class="content col-12">
+                <div class="row mx-auto col-10 car-list">
+                    <div class="col-4 px-2">
+                        <div class="card" id="fade">
+                            <img src="/img/perf3.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                    card's
+                                    content.</p>
+                                <a href="#" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#itemsModal">Детали</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4 px-2">
+                        <div class="card" id="fade">
+                            <img src="/img/perf4.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                    card's
+                                    content.</p>
+                                <a href="#" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#itemsModal">Детали</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4 px-2">
+                        <div class="card" id="fade">
+                            <img src="/img/perf4.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                    card's
+                                    content.</p>
+                                <a href="#" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#itemsModal">Детали</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4 px-2">
+                        <div class="card" id="fade">
+                            <img src="/img/perf3.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                    card's
+                                    content.</p>
+                                <a href="#" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#itemsModal">Детали</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4 px-2">
+                        <div class="card" id="fade">
+                            <img src="/img/perf4.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                    card's
+                                    content.</p>
+                                <a href="#" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#itemsModal">Детали</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4 px-2">
+                        <div class="card" id="fade">
+                            <img src="/img/perf4.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                    card's
+                                    content.</p>
+                                <a href="#" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#itemsModal">Детали</a>
+                            </div>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-10 col-md-8 py-4"><img src="/img/line_bt.webp" alt="" id="liner"></div>
             </div>
         </div>
     </section>
     <!-- о нас  -->
-    <section class="info d-flex align-items-center" id="info">
+    <section class="info" id="info">
+        <svg class="svg2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#F6BC8C" fill-opacity="1"
+                  d="M0,192L48,197.3C96,203,192,213,288,192C384,171,480,117,576,85.3C672,53,768,43,864,53.3C960,64,1056,96,1152,112C1248,128,1344,128,1392,128L1440,128L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z">
+            </path>
+        </svg>
         <div class="container">
-            <div class="row">
-                <div class="col-lg-6 order-lg-2">
-                    <div class="p-5"><img class="img-fluid aboutUs" src="img/perf1.png" alt="..."/></div>
-                </div>
-                <div class="col-lg-6 order-lg-1">
-                    <div class="p-5">
-                        <h1 class="display-4 ">О нас</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid, mollitia odio veniam
-                            sit iste esse assumenda amet aperiam exercitationem, ea animi blanditiis recusandae! Ratione
-                            voluptatum molestiae adipisci, beatae obcaecati.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- каталог карусель  -->
-    <section class="carousel" id="catalog">
-        <!-- кнопка фильтра -->
-        <div class="filter-button text-center mb-2 flex-row"><button class="btn js-filter btn-light">Filter Slides</button>
-        </div>
-        <!-- объекты карусели -->
-        <div class="container pt-3">
-            <div class="row car-list">
-                <div class="col-4 px-2">
-                    <div class="card">
-                        <img src="/img/perf3.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                                content.</p>
-                            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#itemsModal">Детали</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-4 px-2">
-                    <div class="card">
-                        <img src="/img/perf4.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                                content.</p>
-                            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#itemsModal">Детали</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-4 px-2">
-                    <div class="card">
-                        <img src="/img/perf4.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                                content.</p>
-                            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#itemsModal">Детали</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-4 px-2">
-                    <div class="card">
-                        <img src="/img/perf3.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                                content.</p>
-                            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#itemsModal">Детали</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-4 px-2">
-                    <div class="card">
-                        <img src="/img/perf4.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                                content.</p>
-                            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#itemsModal">Детали</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-4 px-2">
-                    <div class="card">
-                        <img src="/img/perf4.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                                content.</p>
-                            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#itemsModal">Детали</a>
-                        </div>
+            <div class="content">
+                <div class="row">
+                    <div class="col-10 col-md-8 col-lg-6 mx-auto about_us" id="about_us">
+                        <h1>О нас</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora molestias a, perferendis ipsa
+                            doloremque, asperiores dolores fugit aspernatur nihil, qui natus necessitatibus illo! Dolores voluptates
+                            eum, fuga laudantium consequuntur deserunt?</p>
                     </div>
                 </div>
             </div>
@@ -224,50 +220,43 @@
     <!-- три картинки -->
     <section class="insp">
         <div class="container">
-            <h2 style="text-align: center;">Текст пример</h2>
             <div class="row justify-content-center">
-                <div class="col-sm-12 col-md-4 px-4">
+                <div class="col-4 px-4 top">
                     <div class="card text-center card-insp">
-                        <div class="img-wrapper-insp"><img src="/img/pic1.png" alt=".."/>
+                        <div class="img-wrapper-insp"><img src="/img/pic3.png" alt=".." />
                             <div class="card-body">
                                 <h4 class="card-title">Card title</h4>
                                 <p class="card-text">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, quidem, laboriosam
-                                    praesentium
-                                    voluptates illo vitae, repudiandae provident soluta dolores sint beatae magni
-                                    deleniti inventore quas
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, quidem, laboriosam praesentium
+                                    voluptates illo vitae, repudiandae provident soluta dolores sint beatae magni deleniti inventore quas
                                     iure voluptatem. Reiciendis, eius repellendus!
                                 </p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-12 col-md-4 px-4">
+                <div class="col-4 px-4 down">
                     <div class="card text-center card-insp">
-                        <div class="img-wrapper-insp"><img src="/img/pic2.png" alt=".."/>
+                        <div class="img-wrapper-insp"><img src="/img/pic3.png" alt=".." />
                             <div class="card-body">
                                 <h4 class="card-title">Card title</h4>
                                 <p class="card-text">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, quidem, laboriosam
-                                    praesentium
-                                    voluptates illo vitae, repudiandae provident soluta dolores sint beatae magni
-                                    deleniti inventore quas
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, quidem, laboriosam praesentium
+                                    voluptates illo vitae, repudiandae provident soluta dolores sint beatae magni deleniti inventore quas
                                     iure voluptatem. Reiciendis, eius repellendus!
                                 </p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-12 col-md-4 px-4">
+                <div class="col-4 px-4 top">
                     <div class="card text-center card-insp">
-                        <div class="img-wrapper-insp"><img src="/img/pic3.png" alt=".."/>
+                        <div class="img-wrapper-insp"><img src="/img/pic3.png" alt=".." />
                             <div class="card-body">
                                 <h4 class="card-title">Card title</h4>
                                 <p class="card-text">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, quidem, laboriosam
-                                    praesentium
-                                    voluptates illo vitae, repudiandae provident soluta dolores sint beatae magni
-                                    deleniti inventore quas
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, quidem, laboriosam praesentium
+                                    voluptates illo vitae, repudiandae provident soluta dolores sint beatae magni deleniti inventore quas
                                     iure voluptatem. Reiciendis, eius repellendus!
                                 </p>
                             </div>
@@ -278,30 +267,21 @@
         </div>
     </section>
     <!-- футыр -->
-    <footer class="bg-dark text-center text-white">
-        <!-- Grid container -->
-        <div class="container p-4 pb-0">
-            <!-- Section: Social media -->
-            <section class="mb-4 ">
-                <!-- Telegram -->
-                <a class="icons-bottom" href="#!"><img class="img-bottom" src="/img/inst.png" alt=""></a>
-                <a class="icons-bottom" href="#!"><img class="img-bottom" src="/img/vk.png" alt=""></a>
-                <a class="icons-bottom" href="#!"><img class="img-bottom" src="/img/tg.png" alt=""></a>
-            </section>
-            <!-- Section: Social media -->
+    <footer>
+        <div class="row justify-content-center">
+            <div class="col-10 col-md-6"><img src="/img/line.png" alt="" id="liner"></div>
         </div>
-        <!-- Grid container -->
-
-        <!-- Copyright -->
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-            © 2023 Copyright:
-            <a class="text-white" href="https://ruslankin.ru/">ruslankin.ru</a>
+        <div class="container d-flex justify-content-center pt-5 pb-2">
+            <a type="button" class="btn btn-circle btn-xl" id="tg"></a>
+            <a href="https://vk.com/id693415126" type="button" class="btn btn-circle btn-xl" id="vk" target="_blank"></a>
+            <a type="button" class="btn btn-circle btn-xl" id="inst"></a>
         </div>
-        <!-- Copyright -->
+        <div class="link"><a href="https://ruslankin.ru/" id="link" target="_blank">кликай</a></div>
     </footer>
+
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script type="text/javascript" src="lib/slick/slick.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
 
     <script type="text/javascript">
         $(document).ready(function () {
